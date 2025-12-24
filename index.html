@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Forever ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:#fff;
+    overflow:hidden;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:url('hero.jpg') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+/* LOVE BURST */
+.burst{
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(255,255,255,0.9),transparent);
+    animation:burst 2s ease-out forwards;
+}
+
+@keyframes burst{
+    from{transform:scale(0);opacity:1;}
+    to{transform:scale(3);opacity:0;}
+}
+
+/* MESSAGE POPUP */
+#message{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.box{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    padding:25px;
+    border-radius:20px;
+    max-width:420px;
+    text-align:center;
+}
+
+.box h1{
+    font-family:'Great Vibes',cursive;
+    font-size:2.5em;
+    margin-bottom:15px;
+}
+
+.box p{
+    font-size:0.95em;
+    line-height:1.6;
+}
+
+.box span{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* MUSIC BUTTON */
+.music{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#fff;
+    color:#000;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:0.9em;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="burst"></div>
+</div>
+
+<div id="message">
+    <div class="box">
+        <h1>My Love</h1>
+        <p>
+I am really very grateful buba that you are with me never leave me ever bubbaa  
+i know i dont keep you happy all the times i make mistakes but baby please do love me forever ❤️  
+that i ask from you ..baby i love you to eternal and long way ..  
+my love for you is unreplenshing and undilutable its forever babe  
+you are my sweet honey cake which i crave for ever baby  
+i know i am saying all the normal stuffs but still i felt to say so i am saying it  
+jaanu jaan i feel you my love
+        </p>
+        <span>YOU ARE MY FOREVER<br>– Sunny</span>
+    </div>
+</div>
+
+<div class="music" onclick="playMusic()">Play Music 🎵</div>
+
+<audio id="bgm" loop>
+    <source src="StayWithMe.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+setTimeout(()=>{
+    document.getElementById('message').style.display='flex';
+},2000);
+
+function playMusic(){
+    document.getElementById('bgm').play();
+}
+</script>
+
+</body>
+</html>
